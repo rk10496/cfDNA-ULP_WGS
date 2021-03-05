@@ -1,7 +1,6 @@
-refFlatb37=/bgfs/soesterreich/pan_data/soesterreich/Tendo/ReferenceFiles/hg19_Versions/ucsc.hg19.fasta/refFlatB37.txt
-CNVkitScripts=/bgfs/soesterreich/pan_data/soesterreich/Tendo/InstalledTools/CNVkit/cnvkit/scripts
-sampleList=/bgfs/soesterreich/pan_data/soesterreich/Tendo/Projects/Project5_ULP_WGS/20200401_Second_Batch_47_Samples_No_Normal/sampleList.txt
-out=/bgfs/soesterreich/pan_data/soesterreich/Tendo/Projects/Project5_ULP_WGS/20200401_Second_Batch_47_Samples_No_Normal/03_CNA_Annotation_CNVkit_By_Gene
+refFlatb37=/WOrkingDirectory/refFlatB37.txt
+CNVkitScripts=/WOrkingDirectory/sampleList.txt
+out=/WOrkingDirectory/
 
 module load cnvkit/0.9.5
 
@@ -9,7 +8,7 @@ while read sample
 
 do
 
-file1=/bgfs/soesterreich/pan_data/soesterreich/Tendo/InstalledTools/ichorCNA/scripts/snakemake/results/ichorCNA/$sample/$sample.cna.seg
+file1=/WOrkingDirectory/$sample.cna.seg
 file2=$out/temp/edit1.cnr
 file3=$out/temp/edit2.cnr
 file4=$out/temp/edit3.cnr
